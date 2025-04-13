@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2@family=Outfit:wght@300&display=swap');
+
+*{
+
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+
+}
+
+
+body{
+    height: 900vh;
+}
+
+nav.menu-lateral{
+    width: 80px;
+    height: 100%;
+    background-color: rgba(21, 122, 100, 0.921);
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 black;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .5s;
+    /* barra lateral*/
+}
+
+nav.menu-lateral.expandir{
+    width: 300px;
+}
+
+.btn-expandir{
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn-expandir > i{
+    color:white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+ul{
+    height: 100%;
+    list-style-type: none;
+}
+
+ul li.item-menu{
+    transition: .2s;
+}
+
+ul li.ativo{
+    background-color: black;
+}
+
+ul li.item-menu:hover{
+    background: black;
+    /* esse é quando passa o mouse em cima*/
+}
+
+ul li.item-menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+
+ul li.item-menu a .txt-link{
+    margin-left: 70px;
+    transition: .5s;
+    opacity: 0;
+}
+
+nav.menu-lateral.expandir .txt-link{
+    margin-left: 40px;
+    opacity: 1;
+}
+
+ul li.item-menu a .icon > i{
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.map-container { height: 70vh; width: 100%; position: relative; }
+#map { height: 100%; width: 100%; z-index: 1; }
+
+.user-location {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #1e90ff;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  z-index: 10;
+}
+
+.biodigestor-marker {
+  background-color: #2e8b57;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.biodigestor-marker::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(46, 139, 87, 0.3);
+  border-radius: 50%;
+  top: -5px;
+  left: -5px;
+}
+
+.search-box {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.nav-item.active {
+  color: #2e8b57;
+  border-top: 2px solid #2e8b57;
+}
+
+.leaflet-control-attribution {
+  display: none;
+}
+
+body.dark {
+  background-color: #1f2937;
+  color: white;
+}
+
+body.dark .bg-white {
+  background-color: #374151 !important;
+}
+
+body.dark input, body.dark .search-box {
+  background-color: #4b5563;
+  color: white;
+}
